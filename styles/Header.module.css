@@ -36,7 +36,7 @@ padding: 2rem 0;
 }
 
 .navegacion a{
-   color: var(--blanco);
+   color: var(--primary);
    text-decoration: none;
    font-size: 1.8rem;
    font-weight: 700;
@@ -48,11 +48,16 @@ padding: 2rem 0;
 
 
 .navegacion a:hover{
-color: var(--primary);
+color: var(--blanco);
 }
 
 .caro{
     margin-top:2rem;
+    font-size: 4rem;
+}
+
+.caro:hover{
+    color: var(--primary);
 }
 
 
