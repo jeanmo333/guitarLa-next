@@ -5,7 +5,7 @@ const Tienda = ({ guitarras }) => {
   return (
     <Layout pagina="Tienda Virtual">
       <main className="contenedor">
-        <h1 className="heading">Nuestra Collecion</h1>
+        <h1 className="heading">Nuestra Tienda</h1>
 
         <Listado guitarras={guitarras} />
       </main>
