@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 import Listado from "../components/Listado";
 import Curso from "../components/Curso";
-import ListadoBlog from "../components/listadoBlog";
+import ListadoBlog from "../components/ListadoBlog";
 
 export default function Home({ guitarras, curso, entradas }) {
   return (
