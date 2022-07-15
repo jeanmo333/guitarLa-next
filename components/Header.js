@@ -23,18 +23,19 @@ const Header = () => {
             <Link href="/nosotros">Nosotros</Link>
             <Link href="/blog">Blog</Link>
             <Link href="/tienda">Tienda</Link>
-            <Link href="/carrito">
-              <a>
-                <Image
-                  layout="fixed"
-                  width={30}
-                  height={25}
-                  src="/img/carrito.png"
-                  alt="Carrito"
-                />
-              </a>
-            </Link>
           </nav>
+
+          <Link href="/carrito">
+            <a className={styles.caro}>
+              <Image
+                layout="fixed"
+                width={30}
+                height={25}
+                src="/img/carrito.png"
+                alt="Carrito"
+              />
+            </a>
+          </Link>
         </div>
         {/**
    {guitarra && (

@@ -51,6 +51,10 @@ padding: 2rem 0;
 color: var(--primary);
 }
 
+.caro{
+    margin-top:2rem;
+}
+
 
 .modelo{
     color: var(--blanco);
