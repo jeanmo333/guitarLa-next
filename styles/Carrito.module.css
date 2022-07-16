@@ -12,7 +12,7 @@
 
 .carrito{
     padding: 2rem 0;
-
+   
 }
 
 
@@ -22,7 +22,7 @@ grid-template-columns: 1fr 3fr;
 gap: 4rem;
 align-items: center;
 border: 1px solid  var(--primary);
-margin: 2rem 0;
+
 border-radius: 10px;
 padding: 1rem;
 position: relative;
@@ -95,9 +95,22 @@ background-color: var(--negro);
 }
 
 
+.vacio{
+    margin-top: 5rem;
+}
+
 .resumen{
     background-color: #F9FAFB;
     padding: 3rem;
     border: 1px solid  var(--primary);
     border-radius:1rem;
+    margin-top: 2rem;
+}
+
+
+@media (max-width: 768px){
+    .resumen{
+        margin-top: 0;
+    }
+    
 }
