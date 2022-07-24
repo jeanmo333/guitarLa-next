@@ -4,7 +4,12 @@ import styles from "../styles/Carrito.module.css";
 import Image from "next/image";
 import { formatearCantidad } from "../helpers";
 
-const Carrito = ({ carrito, actualizarCantidad, eliminarProducto }) => {
+const Carrito = ({
+  carrito,
+  actualizarCantidad,
+  eliminarProducto,
+  loading,
+}) => {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
@@ -73,6 +78,7 @@ const Carrito = ({ carrito, actualizarCantidad, eliminarProducto }) => {
                 <button
                   type="button"
                   className={styles.eliminar}
+                  loading={loading}
                   onClick={() => eliminarProducto(producto._id)}
                 >
                   X

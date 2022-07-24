@@ -4,6 +4,7 @@ import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   const [carrito, setCarrito] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const carritoLS = JSON.parse(localStorage.getItem("carrito")) ?? [];
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }) {
   }, [carrito]);
 
   const agregarCarrito = (producto) => {
+    setLoading(true);
     if (carrito.some((prod) => prod._id === producto._id)) {
       const carritoActualizado = carrito.map((prod) => {
         if (prod._id === producto._id) {
@@ -26,6 +28,7 @@ function MyApp({ Component, pageProps }) {
     } else {
       setCarrito([...carrito, producto]);
     }
+    setLoading(false);
   };
 
   const actualizarCantidad = (producto) => {
@@ -40,10 +43,12 @@ function MyApp({ Component, pageProps }) {
   };
 
   const eliminarProducto = (id) => {
+    setLoading(true);
     const carritoActualizado = carrito.filter(
       (articulo) => articulo._id !== id
     );
     setCarrito(carritoActualizado);
+    setLoading(false);
   };
 
   return (
@@ -54,6 +59,7 @@ function MyApp({ Component, pageProps }) {
       actualizarCantidad={actualizarCantidad}
       eliminarProducto={eliminarProducto}
       setCarrito={setCarrito}
+      loading={loading}
     />
   );
 }

@@ -4,7 +4,7 @@ import Layout from "../../components/Layout";
 import { formatearCantidad } from "../../helpers";
 import styles from "../../styles/Guitarra.module.css";
 
-const Producto = ({ guitarra, agregarCarrito }) => {
+const Producto = ({ guitarra, agregarCarrito, loading }) => {
   const { nombre, descripcion, imagen, precio, _id } = guitarra[0];
   const [cantidad, setCantidad] = useState(1);
 
@@ -58,7 +58,7 @@ const Producto = ({ guitarra, agregarCarrito }) => {
               <option value="5">5</option>
             </select>
 
-            <input type="submit" value="Agregar Al Carrito" />
+            <input type="submit" value="Agregar Al Carrito" loading={loading} />
           </form>
         </div>
       </div>
